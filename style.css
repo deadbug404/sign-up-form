@@ -46,20 +46,69 @@ body{
     align-items: center;
 }
 
-.right-side .right-side-form .first-field{
+.right-side .right-side-form{
     display: flex;
     width: 100%;
+    justify-content: space-around;
+}
+
+.form-style{
+    display: flex;
     flex-direction: column;
+    color: white;
+    width: 40%;
+    gap: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-fieldset{
-    padding: 10px;
+input[type="text"],input[type="password"],input[type="email"]{
+    appearance: none;
+    height: 30px;
+    border-radius: 8px;
+    border: 3px solid white;
 }
 
-label,fieldset,legend{
+.submit-button{
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button{
+    border-radius: 8px;
+    height: 30px;
+    width: 100%;
+    background-color: white;
+    border:none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button:hover{
+    background-color: aqua;
+    cursor: pointer;
     color: white;
 }
 
-label,input[type="text"],input[type="password"]{
-    width: 70%;
+input.invalid{
+    border-color: red;
 }
+
+input.valid{
+    border-color: lime;
+    outline: yellow;
+}
+
+.error{
+    width: 100%;
+    padding: 0;
+  
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+  }
+
+  .error.active {
+    padding: 0.3em;
+  }
